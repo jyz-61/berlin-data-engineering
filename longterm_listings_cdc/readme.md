@@ -40,6 +40,6 @@ cdc_updates table
 
 ## Steps
 - Step 1: Study longterm_listings table ✔️
-- Step 2: Install Kafka and Debezium
-- Step 3: Transform Kafka topics into DB table
-- Step 4: Write Airflow DAG
+- Step 2: Install Kafka and Debezium ✔️
+- Step 3: Transform Kafka topics into DB table ✔️
+- Step 4: Write Airflow DAG ✔️
