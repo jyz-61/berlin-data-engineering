@@ -1,0 +1,23 @@
+{
+  "name": "longterm-listings-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "ep-weathered-bird-adi4s1o1-pooler.c-2.us-east-1.aws.neon.tech",
+    "database.port": "5432",
+    "database.user": "${DB_USER}",
+    "database.password": "${DB_PASSWORD}",
+    "database.dbname": "layered_berlin",
+    "database.server.name": "layered_berlin",
+    "table.include.list": "enginering_alerts.longterm_listings",
+    "plugin.name": "pgoutput",
+    "topic.prefix": "layered_berlin",
+    "topic.creation.default.replication.factor": "1",
+    "topic.creation.default.partitions": "1",
+    "slot.name": "debezium_longterm_listings",
+    "publication.name": "listings_pub",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false"
+  }
+}
